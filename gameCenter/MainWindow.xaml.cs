@@ -1,4 +1,6 @@
-﻿using gameCenter.Projects.Project1;
+﻿using gameCenter.Projects.CurrencyConverter;
+using gameCenter.Projects.Project1;
+using gameCenter.Projects.TodoList;
 using System;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,8 +25,8 @@ namespace gameCenter
             GameText.Content = (image.Name) switch
             {
                 "Image1" => "a User Management System",
-                "Image2" => "Game No. 2 is a game about lorm ipsum & happy birthday",
-                "Image3" => "Game No. 3 is a game about lorm ipsum & happy birthday",
+                "Image2" => "To do list project",
+                "Image3" => "Currency convertor",
                 "Image4" => "Game No. 4 is a game about lorm ipsum & happy birthday",
                 "Image5" => "Game No. 5 is a game about lorm ipsum & happy birthday",
                 "Image6" => "Game No. 6 is a game about lorm ipsum & happy birthday",
@@ -45,7 +47,21 @@ namespace gameCenter
             project1.ShowDialog();
             Show();
         }
+        private void Image2_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            TodoList todoListProject = new();
+            Hide();
+            todoListProject.ShowDialog();
+            Show();
+        }
+        private void Image3_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            CurrencyConvertorView currencyProject = new();
+            Hide();
+            currencyProject.ShowDialog();
+            Show();
+        }
 
-        
+
     }
 }
